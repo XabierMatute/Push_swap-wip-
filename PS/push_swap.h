@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:50:23 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/24 15:34:35 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:36:12 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	ft_nlstfree(t_nlist	**a);
 t_nlist	*ft_nlstlast(t_nlist *lst);
 t_nlist	*ft_nlstpenlast(t_nlist *lst);
 int		ft_nlstsize(t_nlist *lst);
+int	ft_nlstbigger(t_nlist	*l, int n);
+int	ft_nlstsmaller(t_nlist	*l, int n);
 
 int	inorder(t_nlist	*a);
 int	inorderb(t_nlist	*a);
