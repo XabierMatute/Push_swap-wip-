@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:16:29 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/29 22:23:55 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/11/29 22:37:28 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,15 @@ void case5(t_nlist	**a, t_nlist	**b)
 			ra(a);
 		}
 		else if (ft_nlstsmaller(*a, ft_nlstpenlast(*a)->num) <= 2)
-		{}
+		{
 			rra(a);
 			rra(a);
+		}
+		pb(a, b);
 	}
-	
-	
-	
+	o3a(a, b);
+	pa(a, b);
+	pa(a, b);
+	check(a, b);
+	case5(a, b);
 }
