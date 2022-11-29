@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 15:26:32 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/29 16:34:23 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:39:50 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_nlstsmaller(t_nlist	*l, int n)
 	i = 0;
 	while (l)
 	{
-		if (l->num > n)
+		if (l->num < n)
 			i++;
 		l = l->next;
 	}
