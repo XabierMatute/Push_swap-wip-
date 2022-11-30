@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:50:23 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/29 17:07:07 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/11/30 09:19:38 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void check(t_nlist	**a, t_nlist	**b);
 
 void case2(t_nlist	**a, t_nlist	**b);
 void case3(t_nlist	**a, t_nlist	**b);
+void case5(t_nlist	**a, t_nlist	**b);
 
 void	ps(t_nlist	**a,  t_nlist	**b);
 
