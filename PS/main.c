@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:36:45 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/22 21:26:48 by xmatute-         ###   ########.fr       */
+/*   Updated: 2022/11/30 09:51:34 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void cases(t_nlist	**a, t_nlist	**b)
 		case2(a, b);
 	else if (ft_nlstsize(*a) == 3)
 		case3(a, b);
+	else if (ft_nlstsize(*a) == 5)
+		case5(a, b);
 		ps(a, b);
 }
 
@@ -50,7 +52,7 @@ void	listarg2(int n, char const *argv[])
 	b = NULL;
 	while (n-- > 1)
 		listarg1(argv[n], &a);
-	 printnlst(a);
+	 //printnlst(a);
 	checkrep(&a);
 	cases(&a, &b);
 }
