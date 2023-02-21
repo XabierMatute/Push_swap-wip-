@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:50:23 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/30 09:19:38 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:23:16 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,17 @@
 // # include <stdlib.h>
 // # include <sys/types.h>
 
+#define SA 1
+#define SB 2
+#define SS 3
+#define PA 4
+#define PB 5
+#define RA 6
+#define RB 7
+#define RR 8
+#define RRA 9
+#define RRB 10
+#define RRR 11
 typedef struct s_nlist
 {
 	int				num;
@@ -41,7 +52,7 @@ void	ft_nlstadd_front(t_nlist **lst, t_nlist *new);
 void	ft_nlstfree(t_nlist	**a);
 t_nlist	*ft_nlstlast(t_nlist *lst);
 t_nlist	*ft_nlstpenlast(t_nlist *lst);
-int		ft_nlstsize(t_nlist *lst);
+size_t		ft_nlstsize(t_nlist *lst);
 size_t	ft_nlstbigger(t_nlist	*l, int n);
 size_t	ft_nlstsmaller(t_nlist	*l, int n);
 
@@ -90,6 +101,16 @@ int	numeric2(int n, char const *s2[]);
 int	inrange2(int n, char const *s2[]);
 void	checkrep(t_nlist	**a);
 
+t_nlist *ft_nlstdup(t_nlist *l);
+void	ft_lstadd_back(t_nlist **lst, t_nlist *new);
+void	printanser(char *s);
+void beast(t_nlist	**a, t_nlist	**b);
+char *bestanser(t_nlist	**a, t_nlist	**b);
+int	rightanser(t_nlist	*a, t_nlist	*b, char *s);
+void	algoritmo(t_nlist	**a, t_nlist	**b);
+t_nlist *smallest(t_nlist *a);
+t_nlist *biggest(t_nlist *a);
+void moveup(t_nlist	**a, t_nlist	*n);
 
 // int		ft_isspace(char c);
 

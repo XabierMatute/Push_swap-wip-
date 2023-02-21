@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nlstadd_front.c                                 :+:      :+:    :+:   */
+/*   biggest.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 18:19:35 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/23 21:09:28 by xmatute-         ###   ########.fr       */
+/*   Created: 2023/02/13 16:05:39 by xmatute-          #+#    #+#             */
+/*   Updated: 2023/02/13 17:12:08 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_nlstadd_front(t_nlist **lst, t_nlist *new)
+t_nlist *biggest(t_nlist *a)
 {
-	new->next = *lst;
-	*lst = new;
-}
+	t_nlist	*s;
 
-void	ft_lstadd_back(t_nlist **lst, t_nlist *new)
-{
-	if (!*lst)
-		*lst = new;
-	else if (!((*lst)->next))
-		(*lst)->next = new;
-	else
-		ft_lstadd_back(&(*lst)->next, new);
+	s = a;
+	while (a)
+	{
+		if (a->num > s->num)
+			s = a;
+		a = a->next;
+	}
+	return (s);
 }

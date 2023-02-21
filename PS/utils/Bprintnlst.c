@@ -18,8 +18,8 @@ void printaAB(t_nlist* a, t_nlist* b)
 	printf("\nn: a       b");
 		size_t	i = 0;
 		int	p=0;
-		int n;
-	while ((a || b) && i < 42)
+		// int n;
+	while ((a || b))
 	{
 		printf("\n%zi: ", i);
 		if (a != NULL)

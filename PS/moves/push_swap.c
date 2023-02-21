@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:55:30 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/24 15:36:19 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:54:36 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,37 +28,37 @@ void check3(t_nlist	**a, t_nlist	**b)
 	if (ft_nlstsize(*b) == 3)
 		o3b(a, b);
 }
-void	ps(t_nlist	**a, t_nlist	**b)
-{
-	//printaAB(*a, *b);
+// void	ps(t_nlist	**a, t_nlist	**b)
+// {
+// 	//printaAB(*a, *b);
 
-	check(a, b);
-	if (!inorder(*a) && (ft_nlstsize(*a) > 3))
-	{
-		pb(a, b);
-	}
+// 	check(a, b);
+// 	if (!inorder(*a) && (ft_nlstsize(*a) > 3))
+// 	{
+// 		pb(a, b);
+// 	}
 	
-	while (!inorder(*a) && (ft_nlstsize(*a) > 3))
-	{
-		pb(a, b);
-		printaAB(*a, *b);
-		swap_in(a, b);
-		printaAB(*a, *b);
-		check3(a, b);
+// 	while (!inorder(*a) && (ft_nlstsize(*a) > 3))
+// 	{
+// 		pb(a, b);
+// 		printaAB(*a, *b);
+// 		swap_in(a, b);
+// 		printaAB(*a, *b);
+// 		check3(a, b);
 		
-	}
+// 	}
 
-	while (*b)
-	{
-		pa(a, b);
-		printaAB(*a, *b);
-		swap_in(a, b);
-		printaAB(*a, *b);
-	}
-	ps(a, b);
+// 	while (*b)
+// 	{
+// 		pa(a, b);
+// 		printaAB(*a, *b);
+// 		swap_in(a, b);
+// 		printaAB(*a, *b);
+// 	}
+// 	ps(a, b);
 	
 	
-}
+// }
 
 // void	ps(t_nlist	**a, t_nlist	**b)
 // {

@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:29:22 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/23 21:54:05 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:58:31 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ void	*ft_calloc(size_t nitems, size_t size)
 char	*next(char *s)
 {
 	if (*s < RRR)
-		*s++;
+		(*s)++;
 	else if (*s == RRR)
 	{
 		*s = 1;
 		next(s + 1);
 	}
+	// podar(s);
 	else
 		return (0);
-	return (s);	
+	return (s);
 }
 
 char *bestanser(t_nlist	**a, t_nlist	**b)
@@ -49,11 +50,15 @@ char *bestanser(t_nlist	**a, t_nlist	**b)
 	char *s;
 
 	s = calloc(115000, sizeof(char));
+	s[0] = -1;
 	if (!s)
 		return (0);
+		printaAB(*a, *b);
+
 	while (!rightanser(ft_nlstdup(*a), ft_nlstdup(*b), next(s)))
 	{
-		/* code */
+			printanser(s);
+		write(1, "\n\n", 2);
 	}
 	return (s);
 }

@@ -1,54 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printanser.c                                       :+:      :+:    :+:   */
+/*   rightanser.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 21:54:38 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/23 22:56:19 by xmatute-         ###   ########.fr       */
+/*   Created: 2023/01/24 11:16:12 by xmatute-          #+#    #+#             */
+/*   Updated: 2023/01/24 12:34:05 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void printmove(char m)
+void	applymove(t_nlist	**a, t_nlist	**b, char m)
 {
 	if (m == SA)
-		write(1, "sa", 2);
+		sa(a);
 	if (m == SB)
-		write(1, "sb", 2);
+		sb(b);
 	if (m == SS)
-		write(1, "ss", 2);
+		ss(a, b);
 	if (m == PA)
-		write(1, "pa", 2);
+		pa(a, b);
 	if (m == PB)
-		write(1, "pb", 2);
+		pb(a, b);
 	if (m == RA)
-		write(1, "ra", 2);
+		ra(a);
 	if (m == RB)
-		write(1, "rb", 2);
+		rb(b);
 	if (m == RR)
-		write(1, "rr", 2);
+		rr(a, b);
 	if (m == RRA)
-		write(1, "rra", 3);
+		rra(a);
 	if (m == RRB)
-		write(1, "rrb", 3);
+		rrb(b);
 	if (m == RRR)
-		write(1, "rrr", 3);
-	write(1, "\n", 1);
-
+		rrr(a, b);
 }
 
-void	printanser(char *s)
+int	rightanser(t_nlist	*a, t_nlist	*b, char *s)
 {
-	int i;
+	int r;
 
-	i = 0;
-	while (s[i])
+	r = 0;
+	while (*s)
 	{
-		printmove(s[i]);
-		i++;
+		applymove(&a, &b, *s);
+		s++;
 	}
-	//free s
+	if (inorder(a) && !b)
+	{
+		printaAB(a, b);
+		r = 1;
+	}
+	if (a)
+		ft_nlstfree(&a);
+	if (b)
+		ft_nlstfree(&b);
+	return (r);
 }

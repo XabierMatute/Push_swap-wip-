@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:36:45 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/30 09:51:34 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:40:35 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 void cases(t_nlist	**a, t_nlist	**b)
 {
+	// beast(a, b);
+	// ft_end(a, b);	
 	if (ft_nlstsize(*a) < 2)
 		ft_end(a, b);
 	else if (ft_nlstsize(*a) == 2)
 		case2(a, b);
 	else if (ft_nlstsize(*a) == 3)
 		case3(a, b);
-	else if (ft_nlstsize(*a) == 5)
-		case5(a, b);
-		ps(a, b);
+	else
+		algoritmo(a, b);
+	// else if (ft_nlstsize(*a) == 5)
+	// 	case5(a, b);
+	// 	ps(a, b);
 }
 
-void	listarg1(char const *s, t_nlist	**a)
+static void	listarg1(char const *s, t_nlist	**a)
 {
 	size_t	i;
 	t_nlist	*node;

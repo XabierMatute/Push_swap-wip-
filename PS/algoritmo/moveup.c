@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:12:23 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/02/13 16:47:57 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/17 12:47:23 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ int rotatenum(t_nlist	*a, t_nlist	*n)
 void moveup(t_nlist	**a, t_nlist	*n)
 {
 	if (rotatenum(*a, n) < rrotatenum(*a, n))
-		while (*a != n)//se puede optimizar
-			ra(a);
+		while (*a != n)
+			rb(a);
 	else
-		while (*a != n)//se puede optimizar
-			rra(a);
+		while (*a != n)
+			rrb(a);
 	
 }

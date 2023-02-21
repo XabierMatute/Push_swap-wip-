@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:20:44 by xmatute-          #+#    #+#             */
-/*   Updated: 2022/11/17 13:37:40 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:16:31 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,26 @@ void	rotate(t_nlist	**l)
 void	ra(t_nlist	**a)
 {
 	write(1, "ra\n", 3);
-	rotate(a);
+	if (*a)
+		if((*a)->next)
+			rotate(a);
 }
 
 void	rb(t_nlist	**b)
 {
 	write(1, "rb\n", 3);
-	rotate(b);
+	if (*b)
+		if((*b)->next)
+			rotate(b);
 }
 
 void	rr(t_nlist	**a, t_nlist	**b)
 {
 	write(1, "rr\n", 3);
-	rotate(a);
-	rotate(b);
+	if (*a)
+		if((*a)->next)
+			rotate(a);
+	if (*b)
+		if((*b)->next)
+			rotate(b);
 }
