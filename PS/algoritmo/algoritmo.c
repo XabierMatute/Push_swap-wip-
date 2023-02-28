@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:00:21 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/02/28 16:48:32 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/28 19:11:18 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ t_nlist	*getpivote(t_nlist **lst,  size_t size)
 		node = node->next;
 		i++;
 	}
-	printf("ey babygirl\n");
 	return (0);
 }
 
@@ -54,11 +53,18 @@ void	qsb(t_nlist	**a, t_nlist	**b, size_t size, t_nlist	*pivote)
 	i = 0;
 	p = 0;
 	r = 0;
-	swap_in(a, b);
-	if (size < 3 || !pivote)
+	// printf("entramos a QSB con\n");
+	// printaAB(*a, *b);
+	// printf("size = %zu Pivote = %i\n", size, pivote->num);
+	if (size == 2)
+		swap_in(a, b);
+	if (size < 3 || !pivote || inorderbsize(*b, size))
+	{
+		while (size--)
+			pa(a, b);
 		return;
-
-	while (*b && p + r < size && ft_nlstbiggersize(*a, pivote->num, size - p))
+	}
+	while (*b && p + r < size && ft_nlstbiggersize(*b, pivote->num, size - p))
 	{
 		if ((*b)->num >= pivote->num)
 		{
@@ -76,10 +82,13 @@ void	qsb(t_nlist	**a, t_nlist	**b, size_t size, t_nlist	*pivote)
 			rrb(b);
 	qs(a, b, p, getpivote(a, p));
 	qsb(a, b, size - p, getpivote(b, size - p));
-	while (p--)
-	{
-		pb(a, b);
-	}
+	// while (p--)
+	// {
+	// 	pb(a, b);
+	// }
+	// printf("salimos de QSB con\n");
+	// printaAB(*a, *b);
+	// printf("size = %zu Pivote = %i\n", size, pivote->num);
 }
 
 void	qs(t_nlist	**a, t_nlist	**b, size_t size, t_nlist	*pivote)
@@ -89,13 +98,14 @@ void	qs(t_nlist	**a, t_nlist	**b, size_t size, t_nlist	*pivote)
 
 	p = 0;
 	r = 0;
-	swap_in(a, b);
-	if (size < 3|| !pivote)
+	// printf("entramos a QS con\n");
+	// printaAB(*a, *b);
+	// printf("size = %zu Pivote = %i\n", size, pivote->num);
+	if (size == 2)
+		swap_in(a, b);
+	if (size < 3 || !pivote || inordersize(*a, size))
 		return;
-
-
-
-	while (*a && p + r < size && ft_nlstbiggersize(*a, pivote->num, size - p))
+	while (*a && p + r < size && ft_nlstsmallersize(*a, pivote->num, size - p))
 	{
 		if ((*a)->num <= pivote->num)
 		{
@@ -112,11 +122,15 @@ void	qs(t_nlist	**a, t_nlist	**b, size_t size, t_nlist	*pivote)
 		while (r--)
 			rra(a);
 	qs(a, b, size - p, getpivote(a, size - p));
-	// qsb(a, b, p, getpivote(b, p));
-	while (p--)
-	{
-		pa(a, b);
-	}
+	qsb(a, b, p, getpivote(b, p));
+	// while (p--)
+	// {
+	// 	pa(a, b);
+	// }
+	// printf("salimos de QS con\n");
+	// printaAB(*a, *b);
+	// printf("size = %zu Pivote = %i\n", size, pivote->num);
+
 	
 }
 
