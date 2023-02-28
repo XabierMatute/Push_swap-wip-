@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:54:38 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/23 22:56:19 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:17:13 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,13 @@ void	printanser(char *s)
 	int i;
 
 	i = 0;
+	printf("\n");
+
 	while (s[i])
 	{
 		printmove(s[i]);
 		i++;
 	}
+	printf("\n");
 	//free s
 }

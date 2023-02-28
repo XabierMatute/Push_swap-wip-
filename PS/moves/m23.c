@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 20:34:08 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/02/21 11:06:08 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/24 14:48:27 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void case2(t_nlist	**a, t_nlist	**b)
 {
 	check(a, b);
 	sa(a);
-	printaAB(*a, *b);
 }
 
 void case3(t_nlist	**a, t_nlist	**b)
@@ -35,7 +34,6 @@ void case3(t_nlist	**a, t_nlist	**b)
 		ra(a);
 	else if (n2 > n3 && n2 > n1)
 		rra(a);	
-		printaAB(*a, *b);
 	// case3(a, b);
 }
 

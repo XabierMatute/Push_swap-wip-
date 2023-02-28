@@ -6,7 +6,7 @@
 #    By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 11:51:32 by xmatute-          #+#    #+#              #
-#    Updated: 2023/02/13 17:12:52 by xmatute-         ###   ########.fr        #
+#    Updated: 2023/02/24 15:00:44 by xmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,10 @@ SRC :=	main.c \
 		
 OBJ := $(SRC:%.c=%.o)
 
-SANI 	:= -fsanitize=address -g3
+# SANI 	:= -fsanitize=address -g3
 
 CC 		:= gcc
-CFLAGS 	:= -Wall  -Wextra -Werror $(SANI)
+CFLAGS 	:= -Wall  -Wextra -Werror 
 # CFLAGS 	:= -Wall -Werror -Wextra $(SANI)
 
 RM 		:= rm -rf

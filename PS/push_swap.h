@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:50:23 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/02/17 13:23:16 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/24 11:58:52 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,9 @@ void	algoritmo(t_nlist	**a, t_nlist	**b);
 t_nlist *smallest(t_nlist *a);
 t_nlist *biggest(t_nlist *a);
 void moveup(t_nlist	**a, t_nlist	*n);
+
+size_t	ft_nlstsmallersize(t_nlist	*l, int n, size_t size);
+size_t	ft_nlstbiggersize(t_nlist	*l, int n, size_t size);
 
 // int		ft_isspace(char c);
 

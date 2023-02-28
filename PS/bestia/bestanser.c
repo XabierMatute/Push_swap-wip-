@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:29:22 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/24 13:58:31 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:07:39 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ char *bestanser(t_nlist	**a, t_nlist	**b)
 	s[0] = -1;
 	if (!s)
 		return (0);
-		printaAB(*a, *b);
 
 	while (!rightanser(ft_nlstdup(*a), ft_nlstdup(*b), next(s)))
 	{
-			printanser(s);
-		write(1, "\n\n", 2);
+		// printaAB(*a, *b);
+		// 	printanser(s);
+		// write(1, "\n\n", 2);
 	}
 	return (s);
 }

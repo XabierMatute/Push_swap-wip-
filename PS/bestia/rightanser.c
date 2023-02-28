@@ -6,7 +6,7 @@
 /*   By: xmatute- <xmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 11:16:12 by xmatute-          #+#    #+#             */
-/*   Updated: 2023/01/24 12:34:05 by xmatute-         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:02:41 by xmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	rightanser(t_nlist	*a, t_nlist	*b, char *s)
 	}
 	if (inorder(a) && !b)
 	{
-		printaAB(a, b);
+		// printaAB(a, b);
 		r = 1;
 	}
 	if (a)
